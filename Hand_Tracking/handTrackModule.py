@@ -10,9 +10,10 @@ class HandDetector:
         self.maxHands = maxHands
         self.detConf = detConf
         self.trackConf = trackConf
+        self.complexity = 1
 
         self.mpHands = mp.solutions.hands
-        self.hands = self.mpHands.Hands(self.mode, self.maxHands, self.detConf, self.trackConf)
+        self.hands = self.mpHands.Hands(self.mode, self.maxHands,self.complexity, self.detConf, self.trackConf)
         self.mpDraw = mp.solutions.drawing_utils
         self.tipIDs = [4, 8, 12, 16, 20]
 
